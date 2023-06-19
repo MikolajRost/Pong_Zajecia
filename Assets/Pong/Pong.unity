@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 120201838}
   - component: {fileID: 120201837}
   m_Layer: 0
-  m_Name: Border
+  m_Name: WallUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 169748626}
   - component: {fileID: 169748625}
   m_Layer: 0
-  m_Name: Border (3)
+  m_Name: GoalLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,6 +273,9 @@ MonoBehaviour:
   Speed: 2
   UpKey: 119
   DownKey: 115
+  Fire: 306
+  BulletPrefab: {fileID: 7408639241514999038, guid: f9508691fbfd6f04e805a5468f660389, type: 3}
+  RespawnTime: 1
 --- !u!212 &277125109
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -377,7 +380,7 @@ GameObject:
   - component: {fileID: 417263888}
   - component: {fileID: 417263887}
   m_Layer: 0
-  m_Name: Border (2)
+  m_Name: GoalRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -435,7 +438,7 @@ GameObject:
   - component: {fileID: 892178942}
   - component: {fileID: 892178941}
   m_Layer: 0
-  m_Name: Border (1)
+  m_Name: WallDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -689,6 +692,7 @@ MonoBehaviour:
   rb2D: {fileID: 0}
   Speed: 5
   vel: {x: 0, y: 0}
+  Space: 32
 --- !u!61 &1019208729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -749,6 +753,9 @@ MonoBehaviour:
   Speed: 2
   UpKey: 273
   DownKey: 274
+  Fire: 305
+  BulletPrefab: {fileID: 7408639241514999038, guid: f9508691fbfd6f04e805a5468f660389, type: 3}
+  RespawnTime: 1
 --- !u!212 &1965232777
 SpriteRenderer:
   m_ObjectHideFlags: 0

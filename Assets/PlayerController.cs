@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     public float Speed = 1f;
     public KeyCode UpKey = KeyCode.W;
     public KeyCode DownKey = KeyCode.S;
+    public KeyCode Fire = KeyCode.F;
+    public GameObject BulletPrefab;
+    public float RespawnTime = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -15,11 +18,10 @@ public class PlayerController : MonoBehaviour
     
     }
 
+
     // Update is called once per frame
     void Update()
     {
-       
-
         if(Input.GetKey(UpKey) && transform.position.y <4)
         {
              transform.position += Vector3.up * Time.deltaTime * Speed;
@@ -28,5 +30,9 @@ public class PlayerController : MonoBehaviour
         {
             transform.position -= Vector3.up * Time.deltaTime * Speed;
         }
-    }
+        if(Input.GetKey(Fire))
+        {
+            Instantiate(BulletPrefab, transform.position, Quaternion.identity);
+        }
+    }   
 }
