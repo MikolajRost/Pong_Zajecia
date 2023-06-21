@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -10,8 +11,7 @@ public class PlayerController : MonoBehaviour
     public KeyCode DownKey = KeyCode.S;
     public KeyCode Fire = KeyCode.F;
     public GameObject BulletPrefab;
-    public float RespawnTime = 1f;
-
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position -= Vector3.up * Time.deltaTime * Speed;
         }
-        if(Input.GetKey(Fire))
+        if(Input.GetKeyDown(Fire))
         {
             Instantiate(BulletPrefab, transform.position, Quaternion.identity);
         }

@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 120201837}
   m_Layer: 0
   m_Name: WallUp
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 277125111}
   m_Layer: 0
   m_Name: PalletLeft
-  m_TagString: Untagged
+  m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,7 +275,6 @@ MonoBehaviour:
   DownKey: 115
   Fire: 306
   BulletPrefab: {fileID: 7408639241514999038, guid: f9508691fbfd6f04e805a5468f660389, type: 3}
-  RespawnTime: 1
 --- !u!212 &277125109
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -439,7 +438,7 @@ GameObject:
   - component: {fileID: 892178941}
   m_Layer: 0
   m_Name: WallDown
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -584,7 +583,7 @@ GameObject:
   - component: {fileID: 1019208729}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -733,7 +732,7 @@ GameObject:
   - component: {fileID: 1965232779}
   m_Layer: 0
   m_Name: PalletRight
-  m_TagString: Untagged
+  m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -755,7 +754,6 @@ MonoBehaviour:
   DownKey: 274
   Fire: 305
   BulletPrefab: {fileID: 7408639241514999038, guid: f9508691fbfd6f04e805a5468f660389, type: 3}
-  RespawnTime: 1
 --- !u!212 &1965232777
 SpriteRenderer:
   m_ObjectHideFlags: 0
