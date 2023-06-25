@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public KeyCode DownKey = KeyCode.S;
     public KeyCode Fire = KeyCode.F;
     public GameObject BulletPrefab;
+    public GameObject Pallet;
  
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,7 @@ public class PlayerController : MonoBehaviour
         }
         if(Input.GetKeyDown(Fire))
         {
-            Instantiate(BulletPrefab, transform.position, Quaternion.identity);
+            Instantiate(BulletPrefab, Pallet.transform.position, Quaternion.identity);
         }
     }   
 }

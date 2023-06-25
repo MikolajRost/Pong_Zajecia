@@ -10,6 +10,7 @@ public class BulletBehaviour :  MonoBehaviour
 { 
     public float Speed = 10f;
     private Rigidbody2D rb;
+    public Vector2 vel;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +19,11 @@ public class BulletBehaviour :  MonoBehaviour
         
         if(transform.position.x < 0)
         {
-            rb.velocity = new Vector2(Speed, rb.velocity.y);
+            rb.velocity = new Vector2(Speed, 0);
         }
         else
         {
-            rb.velocity = new Vector2(Speed, rb.velocity.y);
+            rb.velocity = new Vector2(-Speed, 0);
         }
     }
 
@@ -37,9 +38,12 @@ public class BulletBehaviour :  MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        
-
-       
+    }
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        rb.velocity = Vector2.Reflect(vel, collision.contacts[0].normal);
+        vel = rb.velocity;
     }
 
 }

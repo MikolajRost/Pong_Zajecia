@@ -11,6 +11,7 @@ public class BallController : MonoBehaviour
     public Vector2 vel;
     public KeyCode Space = KeyCode.Space;
     bool GameStarted;
+    public scoreManager scoreManager;
 
     // Start is called before the first frame update
     void Start()
@@ -49,15 +50,16 @@ public class BallController : MonoBehaviour
         vel = rb2D.velocity;
     }
 
-    private void OnTriggerEnter2D(Collider2D colission)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (transform.position.x < 0)
-            print("Right PLayer +1");
+            scoreManager.IncrementLeftPlayerScore();
+
         if (transform.position.x > 0)
-            print("Left PLayer +1");
+            scoreManager.IncrementRightPlayerScore();
         
         rb2D.velocity = Vector2.zero;
-        transform.position = Vector2.zero;
+        transform.position = (Vector3)Vector2.zero;
         GameStarted = false;
     }
    
